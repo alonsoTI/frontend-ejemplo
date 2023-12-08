@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Registro de ventas</title>
+</head>
+
+<body>
+    <div class="container">
+        <br>
+        <h1>Registro de productos vendidos</h1>
+        <form action="">
+            <label for="">Item: </label>
+            <input type="text" name="" id="item"><br><br>
+            <label for="">Price: </label>
+            <input type="text" name="" id="price"><br><br>
+            <label for="">Quantity: </label>
+            <input type="text" name="" id="quantity"><br><br>
+            <label for="">Date: </label>
+            <input type="text" name="" id="date"><br><br>
+            <button onclick="guardar()">Guardar</button>
+        </form>
+
+        <br><br>
+        <h1>Listado de productos vendidos</h1>
+        <button onclick="listar()">Listar ventas</button><br><br>
+        <table id="tabla" border="1">
+            <thead id="thead">
+                <tr>
+                    <th>ID</th>
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+
+            </tbody>
+        </table>
+
+        <br><br><br>
+
+        <h1>Búsqueda de venta por ID</h1>
+        <label for="">Ingrese el ID de la venta: </label>
+        <input type="text" id="id_buscar">
+        <button onclick="buscar()">Buscar</button>
+        <table id="tablaId" border="1">
+            <thead id="theadId">
+                <tr>
+                    <th>ID</th>
+                    <th>Item</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody id="tbodyId">
+                
+            </tbody>
+        </table>
+
+        <br><br><br>
+
+        <h1>Eliminación por ID</h1>
+        <label for="">Ingrese el id de la venta: </label>
+        <input type="text" name="" id="elimina_id">
+        <button onclick="eliminar()">Eliminar</button>
+
+
+
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
+    crossorigin="anonymous"></script>
+</body>
+</html>
